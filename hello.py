@@ -13,15 +13,15 @@ tasks = [
         'id': 1,
         'title': u'Buy groceries',
         'description': u'Milk, Cheese, Pizza, Fruit, Tylenol',
-        'init': u'network',
-        'cmd': u'network_diagnostics.py',
+        'init': u'repeat',
+        'cmd': u'repeat.sh',
         'done': False
     },
     {
         'id': 2,
         'title': u'Learn Python',
         'description': u'Need to find a good Python tutorial on the web',
-        'init': u'repeat',
+        'init': u'network',
         'cmd': u'network_diagnostics.py',
         'done': False
     }
