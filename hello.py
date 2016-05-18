@@ -3,7 +3,7 @@ from logging.handlers import RotatingFileHandler
 from flask import Flask, jsonify, abort, make_response, request, url_for
 import os, subprocess, sys
 app = Flask(__name__)
-MODS = os.path.join(os.getcwd(), 'jarvis', 'modules')
+MODS = os.path.join(os.getcwd(), 'modules')
 logging.basicConfig(filename='jarvis.log',level=logging.DEBUG)
 logging.debug('This is the first log')
 
