@@ -1,6 +1,7 @@
-FROM docker pull danriti/nginx-gunicorn-flask
+FROM danriti/nginx-gunicorn-flask
 MAINTAINER Chris Ryan <christopher.ryan@gmail.com>
 
-RUN apt-get update
+RUN apt-get update && apt-get install git
 
-ADD git@github.com:acer123acer123/tyler.git /deploy/app
+WORKDIR /deploy/app
+RUN git clone https://github.com/acer123acer123/tyler.git /deploy/app && git checkout 
