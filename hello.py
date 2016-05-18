@@ -4,7 +4,7 @@ from flask import Flask, jsonify, abort, make_response, request, url_for
 import os, subprocess, sys
 app = Flask(__name__)
 MODS = os.path.join(os.getcwd(), 'modules')
-logging.basicConfig(filename='tyler.log',level=logging.DEBUG)
+logging.basicConfig(filename='logs/tyler.log',level=logging.DEBUG)
 logging.debug('This is the first log')
 
 
@@ -40,8 +40,8 @@ def incoming_request():
     task = [task for task in tasks if task['init'] == first_word]
     try:
         tcmd = task[0]['cmd']
-        logging.debug(MODS)
         a = subprocess.check_output([MODS +'/' + tcmd, s])
+        logging.debug(a)
         return a
     except:
         return "Jarvis can't find any command for ... " + s
