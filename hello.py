@@ -4,7 +4,7 @@ from flask import Flask, jsonify, abort, make_response, request, url_for
 import os, subprocess, sys
 app = Flask(__name__)
 MODS = os.path.join(os.getcwd(), 'modules')
-logging.basicConfig(filename='jarvis.log',level=logging.DEBUG)
+logging.basicConfig(filename='tyler.log',level=logging.DEBUG)
 logging.debug('This is the first log')
 
 
@@ -27,7 +27,7 @@ tasks = [
     }
 ]
 
-@app.route('/jarvis/api/v1.0/in', methods=['POST'])
+@app.route('/tyler/api/v1.0/in', methods=['POST'])
 def incoming_request():
     if not request.json:
         abort(400)
@@ -40,6 +40,7 @@ def incoming_request():
     task = [task for task in tasks if task['init'] == first_word]
     try:
         tcmd = task[0]['cmd']
+        logging.debug(MODS)
         a = subprocess.check_output([MODS +'/' + tcmd, s])
         return a
     except:
