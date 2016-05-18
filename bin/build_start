@@ -1,0 +1,3 @@
+vi Dockerfile
+docker build -t christopherryan/tyler:v1 .; docker run --name=tyler -d -p 80:80 christopherryan/tyler:v1
+docker exec -t -i tyler /bin/bash
