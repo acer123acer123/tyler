@@ -22,7 +22,7 @@ tasks = [
         'title': u'Learn Python',
         'description': u'Need to find a good Python tutorial on the web',
         'init': u'repeat',
-        'cmd': u'repeat.sh',
+        'cmd': u'network_diagnostics.py',
         'done': False
     }
 ]
