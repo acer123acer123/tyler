@@ -5,8 +5,7 @@ hosts = {
     'other': "Steve's computer"
 }
 
-output_file = "../logs/a.log"
-output_file = "a.log"
+output_file = "../logs/network_diagnostic.log"
 myfile = open(output_file, 'w')
 
 for k, v in hosts.iteritems():
