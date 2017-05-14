@@ -1,0 +1,11 @@
+{
+  "request": {
+    "intent": {
+      "slots": {
+          "command": {
+          "value": "repeat this is something"
+       }
+      }
+    }
+  }
+}
